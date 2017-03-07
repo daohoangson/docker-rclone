@@ -23,4 +23,4 @@ USER rclone
 WORKDIR /home/rclone
 VOLUME ["/home/rclone"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["rclone", "--version"]
+CMD ["--version"]
