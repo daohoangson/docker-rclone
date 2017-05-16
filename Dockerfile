@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.5
 MAINTAINER Dao Hoang Son <daohoangson@gmail.com>
 
 ARG RCLONE_VERSION
@@ -23,4 +23,4 @@ USER rclone
 WORKDIR /home/rclone
 VOLUME ["/home/rclone"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["--version"]
+CMD ["version"]

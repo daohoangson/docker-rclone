@@ -1,8 +1,11 @@
 #!/bin/sh
 
-LATEST_VERSION="1.35"
+LATEST_VERSION="1.36"
+DOCKER_HUB_IMAGE="xfrocks/rclone"
+DOCKER_HUB_IMAGE_WITH_TAG="$DOCKER_HUB_IMAGE:$LATEST_VERSION"
 
-docker build --build-arg RCLONE_VERSION="v$LATEST_VERSION" -t xfrocks/rclone . \
-	&& docker build --build-arg RCLONE_VERSION="v$LATEST_VERSION" -t "xfrocks/rclone:$LATEST_VERSION" . \
-	&& docker push xfrocks/rclone \
-	&& docker push "xfrocks/rclone:$LATEST_VERSION"
+docker build --build-arg RCLONE_VERSION="v$LATEST_VERSION" -t "$DOCKER_HUB_IMAGE" .
+docker tag "$DOCKER_HUB_IMAGE" "$DOCKER_HUB_IMAGE_WITH_TAG"
+
+docker push "$DOCKER_HUB_IMAGE"
+docker push "$DOCKER_HUB_IMAGE_WITH_TAG"
