@@ -1,8 +1,7 @@
 FROM alpine:3.7
-MAINTAINER Dao Hoang Son <daohoangson@gmail.com>
+LABEL maintainer="daohoangson@gmail.com"
 
 ARG RCLONE_VERSION
-ENV RCLONE_RUNTIME_PACKAGES="ca-certificates"
 
 RUN apk add --no-cache \
     ca-certificates \
