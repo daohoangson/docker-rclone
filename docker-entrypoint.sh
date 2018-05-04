@@ -19,5 +19,5 @@ if [ "${1:0:1}" != '/' ]; then
 	set -- rclone --config "$RCLONE_CONF_PATH" "$@"
 fi
 
-echo "Executing $@..."
+echo "Executing $@..." >&2
 exec "$@"
