@@ -2,7 +2,7 @@
 
 set -e
 
-LATEST_VERSION="1.39"
+LATEST_VERSION="1.41"
 DOCKER_HUB_IMAGE="xfrocks/rclone"
 DOCKER_HUB_IMAGE_WITH_TAG="${DOCKER_HUB_IMAGE}:${LATEST_VERSION}"
 
@@ -18,5 +18,5 @@ do
       exit 0;;
   esac
 done
-docker push "${DOCKER_HUB_IMAGE}"
+docker push "${DOCKER_HUB_IMAGE}:latest"
 docker push "${DOCKER_HUB_IMAGE_WITH_TAG}"
