@@ -1,5 +1,4 @@
-FROM alpine:3.7
-LABEL maintainer="daohoangson@gmail.com"
+FROM alpine:3.9
 
 ARG RCLONE_VERSION
 
