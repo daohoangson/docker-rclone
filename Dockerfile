@@ -4,6 +4,7 @@ ARG RCLONE_VERSION
 
 RUN apk add --no-cache \
     ca-certificates \
+    wget \
     \
   && cd /tmp \
   && wget -qO ./rclone.zip http://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-amd64.zip \
