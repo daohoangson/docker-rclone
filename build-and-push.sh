@@ -2,7 +2,8 @@
 
 set -e
 
-LATEST_VERSION="1.41"
+# https://rclone.org/downloads/
+LATEST_VERSION="1.46"
 DOCKER_HUB_IMAGE="xfrocks/rclone"
 DOCKER_HUB_IMAGE_WITH_TAG="${DOCKER_HUB_IMAGE}:${LATEST_VERSION}"
 

@@ -10,7 +10,7 @@ if [ ! -f "${RCLONE_CONF_PATH}" -a -f "${RCLONE_SECRET_PATH}" ]; then
 	cp "$RCLONE_SECRET_PATH" "$RCLONE_CONF_PATH"
 
 	_confName="$( basename ${RCLONE_CONF_PATH} )"
-	echo "Note: Using ${_confName} from ${RCLONE_SECRET_PATH}"
+	echo "Note: Using ${_confName} from ${RCLONE_SECRET_PATH}" >&2
 fi
 
 # always start with rclone unless some absolute path binary is specified
