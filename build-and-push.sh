@@ -3,7 +3,7 @@
 set -e
 
 # https://rclone.org/downloads/
-LATEST_VERSION="1.46"
+LATEST_VERSION="1.50.2"
 DOCKER_HUB_IMAGE="xfrocks/rclone"
 DOCKER_HUB_IMAGE_WITH_TAG="${DOCKER_HUB_IMAGE}:${LATEST_VERSION}"
 
